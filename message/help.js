@@ -493,13 +493,6 @@ ${week}, ${calender}
 
 *╭─❲ MODE WAR ❳*
 *│*
-*│▸* ${prefix}bugv1 
-*│▸* ${prefix}bugv2 
-*│▸* ${prefix}bugv3 
-*│▸* ${prefix}bugv4 
-*│▸* ${prefix}bugv5     
-*│▸* ${prefix}bugvn    
-*│▸* ${prefix}amaterasu 
 *│*
 *╰────────────⦁*
 
