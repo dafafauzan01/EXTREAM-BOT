@@ -1,6 +1,6 @@
 /*
 
-Disini adalah data tempat untuk Voice Note milik si Nina
+Storage untuk Voice Note milik si Nina
 
 
 */

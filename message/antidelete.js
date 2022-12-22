@@ -3,14 +3,15 @@ const moment = require("moment-timezone");
 const time = moment().tz('Asia/Jakarta').format("HH:mm:ss")
 const fs = require("fs");
 const { color } = require("../lib/color");
+const extream = JSON.parse(fs.readFileSync('./database/extream.json'))
 const { text, extendedText, contact, location, liveLocation, image, video, sticker, document, audio, product } = MessageType
-const extream = ["6285156137901-1632578387@g.us","6285156137901-1633160194@g.us"]
+
   
  
 module.exports = async(client, m) => {
 if(extream.includes(m.key.remoteJid)) return
 if (m.key.remoteJid == 'status@broadcast') return 
-if (!client.antidel.includes(m.key.remoteJid)) return
+if (!JSON.parse(fs.readFileSync('./database/antidelete.json')).includes(m.key.remoteJid)) return
 if (!m.key.fromMe && m.key.fromMe) return
 m.message = (Object.keys(m.message)[0] === 'ephemeralMessage') ? m.message.ephemeralMessage.message : m.message
 const jam = moment.tz('Asia/Jakarta').format('HH:mm:ss')

@@ -1,93 +1,88 @@
 
-exports.menu = (dateIslamic, thisHit, listcmdblock, explain, kyun, process, timeWit, timeWita, timeWib, thePrefix, fs, isPremium, getLimit, limitCount, getBalance, senderNumber, blocked, ban, listerror, user, autosticker, forwarding, fake,autoread, autovn, typing,antibugtroli,Toxic, isAntihidetag, isKickarea, isAntiLink, AntiVirtex, isAntiviewonce, hitnya, pushname, ucapanWaktu, prefix, publik, week, weton, calender) => {
+exports.menu = (listcmdblock, explain, kyun, process, timeWit, timeWita, timeWib, multi, fs, isPremium, getLimit, limit, limitCount, balance, getBalance, sender, blocked, ban, listerror, user, autosticker, forwarding, fake,autoread, autovn, typing, Antibuggc,antibugtroli,Toxic, isAntihidetag, isKickarea, isAntiLink, AntiVirtex, isAntiviewonce, hitnya, pushname, ucapanWaktu, prefix, publik, week, weton, calender) => {
 return`*${fake}*
 ${week}, ${calender} 
 
-⬡ Nama : ${pushname}
-⬡ Status : ${isPremium ? '🎫 Premium':'Free'}
-⬡ Limit : ${isPremium ? 'Unlimited' : `${getLimit(senderNumber, limitCount, user)}/${limitCount}`}
-⬡ Saldo : Rp ${getBalance(senderNumber, user).toLocaleString()}
-⬡ Prefix :「  ${thePrefix}  」
-⬡ Mode : ${publik ? "Public" : "Self"}
-⬡ Active : ${kyun(process.uptime())}
-⬡ Time : ${timeWib} WIB
-⬡ Time : ${timeWit} WIT 
-⬡ Time : ${timeWita} WITA
-⬡ Islamic : ${dateIslamic}
-⬡ Hit Today : ${thisHit.toLocaleString()}
-⬡ Total User : ${JSON.parse(fs.readFileSync('./database/user.json')).length.toLocaleString()}
-⬡ Total Error : ${JSON.parse(fs.readFileSync('./database/listerror.json')).length}
-⬡ User Banned : ${JSON.parse(fs.readFileSync('./database/banned.json')).length}
-⬡ User Blocked : ${JSON.parse(fs.readFileSync('./database/userblocked.json')).length} 
-⬡ Cmd Blocked : ${JSON.parse(fs.readFileSync('./database/blockcmd.json')).length} 
+ *╭▸* Nama : ${pushname}
+ *│*⦁ Status : ${isPremium ? 'Premium':'Free'}
+ *│*⦁ Limit : ${isPremium ? 'Unlimited' : `${getLimit(sender, limitCount, limit)}/${limitCount}`}
+ *│*⦁ Balance : $${getBalance(sender, balance)}
+ *│*⦁ Prefix :「  ${multi ? 'Multi Prefix' : `${prefix}`}  」
+ *│*⦁ Mode : ${publik ? "Public" : "Self"}
+ *│*⦁ Active : ${kyun(process.uptime())}
+ *│*⦁ Time : ${timeWib} Wib
+ *│*⦁ Time : ${timeWit} Wit
+ *│*⦁ Time : ${timeWita} Wita
+ *│*⦁ Hit Today : ${JSON.parse(fs.readFileSync('./database/hitToday.json')).length}
+ *│*⦁ Total User : ${JSON.parse(fs.readFileSync('./database/user.json')).length}
+ *│*⦁ Total Error : ${JSON.parse(fs.readFileSync('./database/listerror.json')).length}
+ *│*⦁ User Banned : ${JSON.parse(fs.readFileSync('./database/banned.json')).length}
+ *│*⦁ User Blocked : ${JSON.parse(fs.readFileSync('./database/userblocked.json')).length} 
+ *╰▸* Cmd Blocked : ${JSON.parse(fs.readFileSync('./database/blockcmd.json')).length} 
 
  *]───── COMMAND ─────[*
 					          ▾
  ‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎
 *╭─❲ GROUP ❳*
 *│*
-*│▸* ${prefix}antilink    ${explain ? "[ _On/Off_ ]":""}
-*│▸* ${prefix}antilinkgc   ${explain ? "[ _On/Off_ ]":""}
-*│▸* ${prefix}antivirtex     ${explain ? "[ _On/Off_ ]":""}
-*│▸* ${prefix}antitroli     ${explain ? "[ _On/Off_ ]":""}
-*│▸* ${prefix}antihidetag    ${explain ? "[ _On/Off_ ]":""}
-*│▸* ${prefix}antibadword     ${explain ? "[ _On/Off_ ]":""}
-*│▸* ${prefix}antivo    ${explain ? "[ _On/Off_ ]":""}
-*│▸* ${prefix}antidelete    ${explain ? "[ _On/Off_ ]":""}
-*│▸* ${prefix}addbadword    ${explain ? "[ _Teks_ ]":""}
-*│▸* ${prefix}delbadword     ${explain ? "[ _Teks_ ]":""}
-*│▸* ${prefix}add    ${explain ? "[ _Reply/Nomor_ ]":""}
-*│▸* ${prefix}kick    ${explain ? "[ _Reply/Tag/Nomor_ ]":""}
+*│▸* ${prefix}antilink    ${explain ? "on/off":""}
+*│▸* ${prefix}antilinkgc   ${explain ? "on/off":""}
+*│▸* ${prefix}antivirtex     ${explain ? "on/off":""}
+*│▸* ${prefix}antibuggc    ${explain ? "on/off":""}
+*│▸* ${prefix}antitroli     ${explain ? "on/off":""}
+*│▸* ${prefix}antihidetag    ${explain ? "on/off":""}
+*│▸* ${prefix}antibadword     ${explain ? "on/off":""}
+*│▸* ${prefix}antivo    ${explain ? "on/off":""}
+*│▸* ${prefix}antidelete    ${explain ? "on/off":""}
+*│▸* ${prefix}addbadword    ${explain ? "teks":""}
+*│▸* ${prefix}delbadword     ${explain ? "teks":""}
+*│▸* ${prefix}add    ${explain ? "Reply/Tag/Nomor":""}
+*│▸* ${prefix}kick    ${explain ? "Reply/Tag/Nomor":""}
 *│▸* ${prefix}kickme
-*│▸* ${prefix}kicktime    ${explain ? "[ _Reply/Tag_ ]":""}
-*│▸* ${prefix}opentime    ${explain ? "[ _1 menit/1 jam_ ]":""}
-*│▸* ${prefix}closetime    ${explain ? "[ _1 menit/1 jam_ ]":""}
-*│▸* ${prefix}welcome    ${explain ? "[ _On/Off_ ]":""}
+*│▸* ${prefix}kicktime    ${explain ? "Reply/Tag":""}
+*│▸* ${prefix}opentime    ${explain ? "1 menit/1 jam":""}
+*│▸* ${prefix}closetime    ${explain ? "1 menit/1 jam":""}
+*│▸* ${prefix}welcome    ${explain ? "on/off":""}
 *│▸* ${prefix}linkgc
 *│▸* ${prefix}infogc
-*│▸* ${prefix}gc    ${explain ? "[ _Open/Close/Revoke_ ]":""}
-*│▸* ${prefix}setdesc    ${explain ? "[ _Query_ ]":""}
-*│▸* ${prefix}setnamegc    ${explain ? "[ _Query_ ]":""}
-*│▸* ${prefix}infoall    ${explain ? "[ _Query_ ]":""}
-*│▸* ${prefix}sider      ${explain ? "[ _reply chat bot_ ]":""}
+*│▸* ${prefix}gc    ${explain ? "open/close/revoke":""}
+*│▸* ${prefix}setdesc    ${explain ? "query":""}
+*│▸* ${prefix}setname    ${explain ? "query":""}
+*│▸* ${prefix}infoall    ${explain ? "query":""}
+*│▸* ${prefix}sider      ${explain ? "reply chat bot":""}
 *│▸* ${prefix}unbanchat
-*│▸* ${prefix}promote    ${explain ? "[ _Reply/Tag/Nomor_ ]":""}
-*│▸* ${prefix}demote    ${explain ? "[ _Reply/Tag/Nomor_ ]":""}
+*│▸* ${prefix}promote    ${explain ? "Reply/Tag/Nomor":""}
+*│▸* ${prefix}demote    ${explain ? "Reply/Tag/Nomor":""}
 *│▸* ${prefix}revoke
 *│▸* ${prefix}getppgc
-*│▸* ${prefix}getbio    ${explain ? "[ _Reply_ ]":""}
-*│▸* ${prefix}getpp    ${explain ? "[ _Reply_ ]":""}
-*│▸* ${prefix}ban    ${explain ? "[ _Reply/Tag_ ]":""}
-*│▸* ${prefix}unban    ${explain ? "[ _Reply/Tag_ ]":""}
+*│▸* ${prefix}getbio    ${explain ? "Reply":""}
+*│▸* ${prefix}getpp    ${explain ? "Reply":""}
+*│▸* ${prefix}ban    ${explain ? "Reply/Tag":""}
+*│▸* ${prefix}unban    ${explain ? "Reply/Tag":""}
 *│▸* ${prefix}listban
+*│▸* ${prefix}reminder    ${explain ? "teks/8detik":""}
 *│▸* ${prefix}ceksewa 
-*│▸* ${prefix}voting    ${explain ? "[ _Tag|Alasan|1_ ]":""}
+*│▸* ${prefix}voting    ${explain ? "tag|alasan|1":""}
 *│▸* ${prefix}delvote
-*│▸* ${prefix}totalpesan
 *│▸* vote
 *│▸* devote
 *│*
 *╰────────────⦁*
 
-*╭─❲ ON/OFF SYSTEM ❳*          
+*╭─❲ INFO ❳*          
 *│*
-*│* ▸ Antibadword : ${Toxic ? 'ON ✅' : 'OFF ❌'}
+*│* ▸ Antibuggc : ${Antibuggc ? 'ON' : 'OFF'}
+*│* ▸ Antibadword : ${Toxic ? 'ON' : 'OFF'}
 *│* ▸ Antihidetag : ${isAntihidetag ? 'Aktif' : 'OFF'}
-*│* ▸ Antiasing : ${isKickarea ? 'ON ✅' : 'OFF ❌'}
-*│* ▸ Antilink : ${isAntiLink ? 'ON ✅' : 'OFF ❌'}
-*│* ▸ Antivirtex : ${AntiVirtex ? 'ON ✅' : 'OFF ❌'}
-*│* ▸ Antivo : ${isAntiviewonce ? 'ON ✅' : 'OFF ❌'}
-*│* ▸ Autotyping : ${typing ? 'ON ✅' : 'OFF ❌'}
-*│* ▸ Autovn : ${autovn ? 'ON ✅' : 'OFF ❌'}
-*│* ▸ Autosticker : ${autosticker ? 'ON ✅' : 'OFF ❌'}
-*│* ▸ Autoread : ${autoread ? 'ON ✅' : 'OFF ❌'}
-*│* ▸ Forward : ${forwarding ? 'ON ✅' : 'OFF ❌'}
-*│*
-*╰────────────⦁*
-
-*╭─❲ REPORT BUG ❳*
-*│* 
-*│▸* ${prefix}reportbug     ${explain ? "[ _Teks / Image_ ]":"[ _Teks / Foto_ ]"} 
+*│* ▸ Antiasing : ${isKickarea ? 'ON' : 'OFF'}
+*│* ▸ Antilink : ${isAntiLink ? 'ON' : 'OFF'}
+*│* ▸ Antivirtex : ${AntiVirtex ? 'ON' : 'OFF'}
+*│* ▸ Antivo : ${isAntiviewonce ? 'ON' : 'OFF'}
+*│* ▸ Autotyping : ${typing ? 'ON' : 'OFF'}
+*│* ▸ Autovn : ${autovn ? 'ON' : 'OFF'}
+*│* ▸ Autosticker : ${autosticker ? 'ON' : 'OFF'}
+*│* ▸ Autoread : ${autoread ? 'ON' : 'OFF'}
+*│* ▸ Forward : ${forwarding ? 'ON' : 'OFF'}
 *│*
 *╰────────────⦁*
 
@@ -97,28 +92,17 @@ ${week}, ${calender}
 *│▸* ${prefix}cosplay 
 *│▸* ${prefix}wallml     
 *│▸* ${prefix}katailham
-*│▸* ${prefix}bucin
+*│▸* ${prefix}anna 
+*│▸* ${prefix}asunayuki  
+*│▸* ${prefix}ayuzawa 
+*│▸* ${prefix}chitoge 
+*│▸* ${prefix}emilia    
+*│▸* ${prefix}erza 
+*│▸* ${prefix}hinata
+*│▸* ${prefix}naruto 
+*│▸* ${prefix}sasuke  
 *│▸* ${prefix}anime
 *│▸* ${prefix}memeindo
-*│*
-*╰────────────⦁*
-
-*╭─❲ INFO ❳*    
-*│*
-*│▸* ${prefix}infogempa
-*│▸* ${prefix}gempanow
-*│▸* ${prefix}weather   ${explain ? "[ _Nama Negara_ ]":""} 
-*│▸* ${prefix}cuaca
-*│*
-*╰────────────⦁*
-
-*╭─❲ ANONYMOUS CHAT ❳*    
-*│*
-*│▸* ${prefix}anonymous
-*│▸* ${prefix}start
-*│▸* ${prefix}stop
-*│▸* ${prefix}next
-*│▸* ${prefix}sendkontak
 *│*
 *╰────────────⦁*
 
@@ -128,12 +112,11 @@ ${week}, ${calender}
 *│*
 *╰────────────⦁*
 
-
 *╭─❲ GAME ❳*
 *│*
 *│▸* ${prefix}tebakbendera    
 *│▸* ${prefix}tebakgambar     
-*│▸* ${prefix}tebakanime    
+*│▸* ${prefix}tebakanime    Eror
 *│▸* ${prefix}caklontong     
 *│▸* ${prefix}family100     
 *│▸* ${prefix}tebakkata     
@@ -158,73 +141,42 @@ ${week}, ${calender}
 
 *╭─❲ MAKER ❳*
 *│*
-*│▸* ${prefix}sticker      ${explain ? "[_Reply Image_]":""} 
-*│▸* ${prefix}nobg      ${explain ? "[ _Reply Image_ ]":""} 
-*│▸* ${prefix}take    ${explain ? "[ _teks|teks_ ]":""} 
+*│▸* ${prefix}sticker      ${explain ? "tag":""} 
+*│▸* ${prefix}swm     ${explain ? "teks|teks":""} 
+*│▸* ${prefix}take    ${explain ? "teks|teks":""} 
 *│▸* ${prefix}fdeface    ${explain ? "link|title|desc|teks":""}
-*│▸* ${prefix}emoji    ${explain ? "[ _Wa Emoji_]":""} 
-*│▸* ${prefix}semoji   ${explain ? "[ _emoji_ ]":""} 
-*│▸* ${prefix}nuliskiri    ${explain ? "[ _Teks_ ]":""} 
-*│▸* ${prefix}nuliskanan    ${explain ? "[ _Teks_ ]":""} 
-*│▸* ${prefix}foliokiri     ${explain ? "[ _Teks_ ]":""} 
-*│▸* ${prefix}foliokanan    ${explain ? "[ _Teks_ ]":""} 
-*│▸* ${prefix}tts    ${explain ? "[ _id teks_ ]":""} 
-*│*
-*╰────────────⦁*
-
-*╭─❲ STICK MAKER ❳*
-*│*
-*│▸* ${prefix}triggered    ${explain ? "[ _Tag/Reply_ ]":""} 
-*│▸* ${prefix}wasted    ${explain ? "[ _Reply Image_ ]":""} 
-*│▸* ${prefix}smeme     ${explain ? "[ _Teks | Teks_ ]":""} 
-*│▸* ${prefix}comrade    ${explain ? "[ _Tag/Reply_ ]":""} 
-*│▸* ${prefix}horny    ${explain ? "[ _Reply Image_ ]":""} 
-*│▸* ${prefix}blur     ${explain ? "[ _Teks | Teks_ ]":""} 
-*│▸* ${prefix}pixelate     ${explain ? "[ _Teks | Teks_ ]":""} 
-*│▸* ${prefix}simpcard    ${explain ? "[ _Tag/Reply_ ]":""} 
-*│▸* ${prefix}lolice    ${explain ? "[ _Reply Image_ ]":""} 
-*│▸* ${prefix}glass     ${explain ? "[ _Teks | Teks_ ]":""} 
-*│*
-*╰────────────⦁*
-
-*╭─❲ IMAGE MAKER ❳*
-*│*
-*│▸* ${prefix}wanted    ${explain ? "[_Reply Image_]":""} 
-*│▸* ${prefix}utatoo    ${explain ? "[_Reply Image_]":""} 
-*│▸* ${prefix}unsharpen    ${explain ? "[_Reply Image_]":""} 
-*│▸* ${prefix}thanos    ${explain ? "[_Reply Image_]":""} 
-*│▸* ${prefix}sniper    ${explain ? "[_Reply Image_]":""} 
-*│▸* ${prefix}sharpen    ${explain ? "[_Reply Image_]":""} 
-*│▸* ${prefix}sepia    ${explain ? "[_Reply Image_]":""} 
-*│▸* ${prefix}scary    ${explain ? "[_Reply Image_]":""} 
-*│▸* ${prefix}rip    ${explain ? "[_Reply Image_]":""} 
-*│▸* ${prefix}redple    ${explain ? "[_Reply Image_]":""} 
-*│▸* ${prefix}rejected    ${explain ? "[_Reply Image_]":""} 
-*│▸* ${prefix}posterize    ${explain ? "[_Reply Image_]":""} 
-*│▸* ${prefix}ps4    ${explain ? "[_Reply Image_]":""} 
-*│▸* ${prefix}pixelize    ${explain ? "[_Reply Image_]":""} 
-*│▸* ${prefix}missionpassed    ${explain ? "[_Reply Image_]":""} 
-*│▸* ${prefix}moustache    ${explain ? "[_Reply Image_]":""} 
-*│▸* ${prefix}lookwhatkarenhave    ${explain ? "[_Reply Image_]":""} 
-*│▸* ${prefix}jail    ${explain ? "[_Reply Image_]":""} 
-*│▸* ${prefix}invert    ${explain ? "[_Reply Image_]":""} 
-*│▸* ${prefix}instagram    ${explain ? "[_Reply Image_]":""} 
-*│▸* ${prefix}greyscale    ${explain ? "[_Reply Image_]":""} 
-*│▸* ${prefix}glitch    ${explain ? "[_Reply Image_]":""} 
-*│▸* ${prefix}gay    ${explain ? "[_Reply Image_]":""} 
-*│▸* ${prefix}frame    ${explain ? "[_Reply Image_]":""} 
-*│▸* ${prefix}fire    ${explain ? "[_Reply Image_]":""} 
-*│▸* ${prefix}distort    ${explain ? "[_Reply Image_]":""} 
-*│▸* ${prefix}dictator    ${explain ? "[_Reply Image_]":""} 
-*│▸* ${prefix}deepfry    ${explain ? "[_Reply Image_]":""} 
-*│▸* ${prefix}ddungeon    ${explain ? "[_Reply Image_]":""} 
-*│▸* ${prefix}circle    ${explain ? "[_Reply Image_]":""} 
-*│▸* ${prefix}challenger    ${explain ? "[_Reply Image_]":""} 
-*│▸* ${prefix}burn    ${explain ? "[_Reply Image_]":""} 
-*│▸* ${prefix}brazzers    ${explain ? "[_Reply Image_]":""} 
-*│▸* ${prefix}beautiful    ${explain ? "[_Reply Image_]":""} 
-*│▸* ${prefix}approved    ${explain ? "[_Reply Image_]":""} 
-*│▸* ${prefix}3000years    ${explain ? "[_Reply Image_]":""} 
+*│▸* ${prefix}trigger    ${explain ? "tag/reply":""} 
+*│▸* ${prefix}wasted    ${explain ? "reply image":""} 
+*│▸* ${prefix}emoji    ${explain ? "wa emoji":""} 
+*│▸* ${prefix}semoji   ${explain ? "emoji":""} 
+*│▸* ${prefix}nuliskiri    ${explain ? "teks":""} 
+*│▸* ${prefix}nuliskanan    ${explain ? "teks":""} 
+*│▸* ${prefix}foliokiri     ${explain ? "teks":""} 
+*│▸* ${prefix}foliokanan    ${explain ? "teks":""} 
+*│▸* ${prefix}tts    ${explain ? "id teks":""} 
+*│▸* ${prefix}narutoteks    ${explain ? "teks":""} 
+*│▸* ${prefix}shadow     ${explain ? "teks":""} 
+*│▸* ${prefix}romantic     ${explain ? "teks":""} 
+*│▸* ${prefix}smoke     ${explain ? "teks":""} 
+*│▸* ${prefix}burnpaper     ${explain ? "teks":""} 
+*│▸* ${prefix}lovemsg     ${explain ? "teks":""} 
+*│▸* ${prefix}grass     ${explain ? "teks":""} 
+*│▸* ${prefix}doubleheart     ${explain ? "teks":""} 
+*│▸* ${prefix}coffecup     ${explain ? "teks":""} 
+*│▸* ${prefix}lovetext     ${explain ? "teks":""} 
+*│▸* ${prefix}butterfly     ${explain ? "teks":""} 
+*│▸* ${prefix}wanted    ${explain ? "reply image":""} 
+*│▸* ${prefix}sniper    ${explain ? "reply image":""} 
+*│▸* ${prefix}rip    ${explain ? "reply image":""} 
+*│▸* ${prefix}instagram   ${explain ? "reply image":""} 
+*│▸* ${prefix}beautiful    ${explain ? "reply image":""} 
+*│▸* ${prefix}scary    ${explain ? "reply image":""} 
+*│▸* ${prefix}utatoo    ${explain ? "reply image":""} 
+*│▸* ${prefix}missionpassed    ${explain ? "reply image":""} 
+*│▸* ${prefix}glitch     ${explain ? "reply image":""} 
+*│▸* ${prefix}fire      ${explain ? "reply image":""} 
+*│▸* ${prefix}dictator     ${explain ? "reply image":""} 
+*│▸* ${prefix}ddungeon     ${explain ? "reply image":""} 
 *│*
 *╰────────────⦁*
 
@@ -232,31 +184,37 @@ ${week}, ${calender}
 *│*
 *│▸* ${prefix}toimg    ${explain ? "reply sticker":""} 
 *│▸* ${prefix}tomp3    ${explain ? "reply video":""} 
-*│▸* ${prefix}toptt    ${explain ? "[ _Reply Audio_ ]":""} 
+*│▸* ${prefix}toptt    ${explain ? "reply audio":""} 
 *│▸* ${prefix}slow    ${explain ? "reply video":""} 
 *│▸* ${prefix}togif    ${explain ? "reply video":""} 
 *│▸* ${prefix}tovideo    ${explain ? "reply sticker":""} 
 *│▸* ${prefix}fast    ${explain ? "reply video":""} 
 *│▸* ${prefix}reverse    ${explain ? "reply vidio":""} 
-*│▸* ${prefix}pastebin    ${explain ? "[ _Teks_ ]":""} 
-*│▸* ${prefix}hode    ${explain ? "[ _Reply Audio_ ]":""} 
-*│▸* ${prefix}imut    ${explain ? "[ _Reply Audio_ ]":""} 
-*│▸* ${prefix}nightcore    ${explain ? "[ _Reply Audio_ ]":""} 
-*│▸* ${prefix}ghost    ${explain ? "[ _Reply Audio_ ]":""} 
-*│▸* ${prefix}volume    ${explain ? "[ _Reply Audio_ ]":""} 
+*│▸* ${prefix}pastebin    ${explain ? "teks":""} 
+*│▸* ${prefix}hode    ${explain ? "reply audio":""} 
+*│▸* ${prefix}imut    ${explain ? "reply audio":""} 
+*│▸* ${prefix}nightcore    ${explain ? "reply audio":""} 
+*│▸* ${prefix}ghost    ${explain ? "reply audio":""} 
+*│▸* ${prefix}volume    ${explain ? "reply audio":""} 
 *│*
 *╰────────────⦁*
 
 *╭─❲ STORAGE ❳*
 *│*
-*│▸* ${prefix}adderror    ${explain ? "[ _Teks_ ]":""} 
+*│▸* ${prefix}addmusik    ${explain ? "reply audio":""} 
+*│▸* ${prefix}adderror    ${explain ? "teks":""} 
 *│▸* ${prefix}addstik    ${explain ? "reply sticker":""} 
-*│▸* ${prefix}addvn    ${explain ? "[ _Reply Audio_ ]":""} 
-*│▸* ${prefix}delvn    ${explain ? "[ _Teks_ ]":""} 
-*│▸* ${prefix}delstik    ${explain ? "[ _Teks_ ]":""} 
-*│▸* ${prefix}delerror    ${explain ? "[ _Teks_ ]":""} 
+*│▸* ${prefix}addimg    ${explain ? "reply image":""} 
+*│▸* ${prefix}addvid    ${explain ? "reply video":""} 
+*│▸* ${prefix}addvn    ${explain ? "reply audio":""} 
 *│▸* ${prefix}liststik
+*│▸* ${prefix}listimg
+*│▸* ${prefix}listvid
 *│▸* ${prefix}listerror
+*│▸* ${prefix}delimg    ${explain ? "teks":""} 
+*│▸* ${prefix}delvn    ${explain ? "teks":""} 
+*│▸* ${prefix}delstik    ${explain ? "teks":""} 
+*│▸* ${prefix}delerror    ${explain ? "teks":""} 
 *│*
 *╰────────────⦁*
 
@@ -265,10 +223,10 @@ ${week}, ${calender}
 *│▸* ${prefix}fitnah     ${explain ? "@tagmember|teks|teks":""} 
 *│▸* ${prefix}hobby
 *│▸* ${prefix}watak
-*│▸* ${prefix}bisakah    ${explain ? "[ _Teks_ ]":""} 
-*│▸* ${prefix}apakah    ${explain ? "[ _Teks_ ]":""} 
-*│▸* ${prefix}kapankah    ${explain ? "[ _Teks_ ]":""} 
-*│▸* ${prefix}bagaimanakah    ${explain ? "[ _Teks_ ]":""} 
+*│▸* ${prefix}bisakah    ${explain ? "teks":""} 
+*│▸* ${prefix}apakah    ${explain ? "teks":""} 
+*│▸* ${prefix}kapankah    ${explain ? "teks":""} 
+*│▸* ${prefix}bagaimanakah    ${explain ? "teks":""} 
 *│▸* ${prefix}rate
 *│▸* ${prefix}sangecek
 *│▸* ${prefix}gaycek
@@ -277,30 +235,37 @@ ${week}, ${calender}
 *│▸* ${prefix}cantikcek
 *│▸* ${prefix}jadian 
 *│▸* ${prefix}ngewe
-*│▸* ${prefix}wangy    ${explain ? "[ _nama_ ]":""} 
+*│▸* ${prefix}wangy    ${explain ? "nama":""} 
 *│▸* ${prefix}truth
-*│▸* ${prefix}dare  
+*│▸* ${prefix}dare
 *│▸* ${prefix}cekbapak
 *│*
 *╰────────────⦁*
 
 *╭─❲ PREMIUM ❳*
 *│* 
-*│▸* ${prefix}pinterest    ${explain ? "[ _Teks_ ]":""}   
+*│▸* ${prefix}pinterest    ${explain ? "teks":""} 
+*│▸* ${prefix}asupan 
+*│▸* ${prefix}aspan 
 *│▸* ${prefix}totag    ${explain ? "reply":""} 
 *│▸* ${prefix}chat    ${explain ? "nomer|teks":""} 
 *│▸* ${prefix}simi    ${explain ? "teks/on/off":""} 
 *│▸* ${prefix}caridoi   
-*│▸* ${prefix}hidetag    ${explain ? "[ _Teks_ ]":""} 
+*│▸* ${prefix}hidetag    ${explain ? "teks":""} 
+*│▸* ${prefix}mediafire     ${explain ? "link":""} 
+*│▸* ${prefix}ytdl     ${explain ? "link":""} 
+*│▸* ${prefix}fbhd
 *│▸* ${prefix}twitterhd      ${explain ? "link":""} 
+*│▸* ${prefix}playaudio    ${explain ? "teks":""} 
+*│▸* ${prefix}playvideo   ${explain ? "teks":""} 
 *│*
 *╰────────────⦁*
 
 *╭─❲ PRIMBON ❳*
 *│* 
-*│▸* ${prefix}artinama     ${explain ? "[ _Teks_ ]":""} 
-*│▸* ${prefix}artimimpi     ${explain ? "[ _Teks_ ]":""} 
-*│▸* ${prefix}namapasangan     ${explain ? "[ _Teks_ ]":""} 
+*│▸* ${prefix}artinama     ${explain ? "teks":""} 
+*│▸* ${prefix}artimimpi     ${explain ? "teks":""} 
+*│▸* ${prefix}namapasangan     ${explain ? "teks":""} 
 *│▸* ${prefix}tanggaljadian    ${explain ? "tanggal":""} 
 *│▸* ${prefix}tipewatak      ${explain ? "nama tanggal":""} 
 *│▸* ${prefix}ramalanjodoh    ${explain ? "nama tanggal nama tanggal":""} 
@@ -315,39 +280,37 @@ ${week}, ${calender}
 *│*
 *│▸* ${prefix}ytmp4     ${explain ? "Link":""} 
 *│▸* ${prefix}ytmp3     ${explain ? "Link":""} 
-*│▸* ${prefix}play      ${explain ? "[ _Teks_ ]":""} 
+*│▸* ${prefix}play      ${explain ? "teks":""} 
 *│▸* ${prefix}tiktok     ${explain ? "Link":""} 
 *│▸* ${prefix}tiktoknowm     ${explain ? "Link":""} 
 *│▸* ${prefix}ig     ${explain ? "Link":""} 
 *│▸* ${prefix}igstory     ${explain ? "Link":""} 
 *│▸* ${prefix}twitter          ${explain ? "Link":""} 
-*│▸* ${prefix}gitclone          ${explain ? "Link":""} 
-*│▸* ${prefix}spotify          ${explain ? "Link":""} 
+*│▸* ${prefix}fb          ${explain ? "Link":""} 
 *│*
 *╰────────────⦁* 
 
 *╭─❲ TEXT PROME ❳*
 *│*
-*│▸* ${prefix}blackping     ${explain ? "[ _Teks_ ]":""} 
-*│▸* ${prefix}glitch     ${explain ? "[ _Teks_ ]":""} 
+*│▸* ${prefix}blackping     ${explain ? "teks":""} 
+*│▸* ${prefix}glitch     ${explain ? "teks":""} 
 *│▸* ${prefix}glitch2     ${explain ? "teks|teks":""} 
 *│▸* ${prefix}glitch3      ${explain ? "teks|teks":""} 
-*│▸* ${prefix}lion       ${explain ? "[ _Teks_ ]":""} 
-*│▸* ${prefix}3dneon     ${explain ? "[ _Teks_ ]":""} 
-*│▸* ${prefix}3dspace      ${explain ? "teks|teks":""} 
-*│▸* ${prefix}neon      ${explain ? "[ _Teks_ ]":""} 
-*│▸* ${prefix}greenneon    ${explain ? "[ _Teks_ ]":""} 
-*│▸* ${prefix}bokeh    ${explain ? "[ _Teks_ ]":""} 
-*│▸* ${prefix}hollographic   ${explain ? "[ _Teks_ ]":""} 
-*│▸* ${prefix}bear     ${explain ? "[ _Teks_ ]":""} 
-*│▸* ${prefix}wolf      ${explain ? "[ _Teks_ ]":""} 
-*│▸* ${prefix}joker    ${explain ? "[ _Teks_ ]":""} 
-*│▸* ${prefix}dropwater   ${explain ? "[ _Teks_ ]":""} 
-*│▸* ${prefix}neonlight    ${explain ? "[ _Teks_ ]":""} 
-*│▸* ${prefix}thewall     ${explain ? "[ _Teks_ ]":""} 
-*│▸* ${prefix}natural     ${explain ? "[ _Teks_ ]":""} 
-*│▸* ${prefix}carbon     ${explain ? "[ _Teks_ ]":""} 
-*│▸* ${prefix}pencil     ${explain ? "[ _Teks_ ]":""} 
+*│▸* ${prefix}lion       ${explain ? "teks":""} 
+*│▸* ${prefix}3dneon     ${explain ? "teks":""} 
+*│▸* ${prefix}neon      ${explain ? "teks":""} 
+*│▸* ${prefix}greenneon    ${explain ? "teks":""} 
+*│▸* ${prefix}bokeh    ${explain ? "teks":""} 
+*│▸* ${prefix}hollographic   ${explain ? "teks":""} 
+*│▸* ${prefix}bear     ${explain ? "teks":""} 
+*│▸* ${prefix}wolf      ${explain ? "teks":""} 
+*│▸* ${prefix}joker    ${explain ? "teks":""} 
+*│▸* ${prefix}dropwater   ${explain ? "teks":""} 
+*│▸* ${prefix}foggy    ${explain ? "teks":""} 
+*│▸* ${prefix}thewall     ${explain ? "teks":""} 
+*│▸* ${prefix}natural     ${explain ? "teks":""} 
+*│▸* ${prefix}carbon     ${explain ? "teks":""} 
+*│▸* ${prefix}pencil     ${explain ? "teks":""} 
 *│*
 *╰────────────⦁* 
 
@@ -377,91 +340,86 @@ ${week}, ${calender}
 
 *╭─❲ SEARCH ❳*
 *│*
-*│▸* ${prefix}ytsearch     ${explain ? "[ _Teks_ ]":""} 
-*│▸* ${prefix}google     ${explain ? "[ _Teks_ ]":""} 
+*│▸* ${prefix}ytsearch     ${explain ? "teks":""} 
+*│▸* ${prefix}google     ${explain ? "teks":""} 
 *│▸* ${prefix}igstalk     ${explain ? "username":""} 
-*│▸* ${prefix}gimage     ${explain ? "[ _Teks_ ]":""} 
-*│▸* ${prefix}wiki     ${explain ? "[ _Teks_ ]":""} 
-*│▸* ${prefix}kbbi     ${explain ? "[ _Teks_ ]":""} 
-*│▸* ${prefix}brainly    ${explain ? "[ _Teks_ ]":""} 
-*│▸* ${prefix}whatanime    ${explain ? "[_Reply Image_]":""} 
-*│▸* ${prefix}whatmusic     ${explain ? "[ _Reply Audio_ ]":""} 
+*│▸* ${prefix}gimage     ${explain ? "teks":""} 
+*│▸* ${prefix}wiki     ${explain ? "teks":""} 
+*│▸* ${prefix}kbbi     ${explain ? "teks":""} 
+*│▸* ${prefix}brainly    ${explain ? "teks":""} 
+*│▸* ${prefix}wait     ${explain ? "reply image":""} 
+*│▸* ${prefix}chara    ${explain ? "teks":""} 
+*│▸* ${prefix}lirik     ${explain ? "teks":""} 
+*│▸* ${prefix}wallpaper     ${explain ? "teks":""} 
 *│*
 *╰────────────⦁*
 
 *╭─❲ OTHER ❳*
 *│*
 *│▸* ${prefix}ping
-*│▸* ${prefix}inspect     ${explain ? "[ _link gc_ ]":""} 
-*│▸* ${prefix}caripesan    ${explain ? "[ _Teks_ ]":""} 
+*│▸* ${prefix}inspect     ${explain ? "link gc":""} 
+*│▸* ${prefix}caripesan    ${explain ? "teks":""} 
 *│▸* ${prefix}kontak
-*│▸* ${prefix}style    ${explain ? "[ _Teks_ ]":""} 
+*│▸* ${prefix}style    ${explain ? "teks":""} 
 *│▸* ${prefix}shorturl     ${explain ? "link":""} 
-*│▸* ${prefix}tourl     ${explain ? "[ _Reply Image/Video/Sticker_ ]":""} 
-*│▸* ${prefix}linkwa     ${explain ? "[ _Teks_ ]":""} 
+*│▸* ${prefix}tourl     ${explain ? "reply image/video/sticker":""} 
+*│▸* ${prefix}zalgo     ${explain ? "teks":""} 
+*│▸* ${prefix}linkwa     ${explain ? "teks":""} 
 *│▸* ${prefix}listsewa 
 *│▸* ${prefix}tospam    ${explain ? "reply image/vidio":""} 
-*│▸* ${prefix}spam     ${explain ? "[ _Teks_ ]":""} 
+*│▸* ${prefix}spam     ${explain ? "teks":""} 
 *│▸* ${prefix}kodebahasa 
 *│▸* ${prefix}listvn
 *│▸* ${prefix}ssweb
 *│▸* ${prefix}cerpen     
-*│▸* ${prefix}listgc
-*│▸* ${prefix}translate     ${explain ? "[ _teks/reply teks_ ]":""}   
-*│▸* ${prefix}kalkulator [ _angka_ ]
-*│*
-*╰────────────⦁*
-
-*╭─❲ SETTING BOT❳*
-*│*
-*│▸* ${prefix}setprefix    ${explain ? "[_Reply Image_]":""} 
-*│▸* ${prefix}setthumb    ${explain ? "[_Reply Image_]":""} 
-*│▸* ${prefix}setppbot     ${explain ? "[_Reply Image_]":""} 
-*│▸* ${prefix}setfakeimg    ${explain ? "[_Reply Image_]":""} 
-*│▸* ${prefix}setimgdoc    ${explain ? "[_Reply Image_]":""} 
-*│▸* ${prefix}setimgreply    ${explain ? "[_Reply Image_]":""} 
-*│▸* ${prefix}setimginfo     ${explain ? "[_Reply Image_]":""} 
-*│▸* ${prefix}setreply 
-*│▸* ${prefix}setbc     ${explain ? "[ _troli/lokasi/dokumen_ ]":""} 
-*│▸* ${prefix}setquoted
-*│▸* ${prefix}setexif
-*│▸* ${prefix}setmenu      ${explain ? "[ _pdf/troli/katalog/lokasi_ ]":""} 
-*│▸* ${prefix}setovo      ${explain ? "[_Reply Image_]":""} 
-*│▸* ${prefix}setgopay      ${explain ? "[_Reply Image_]":""} 
-*│▸* ${prefix}setdana       ${explain ? "[_Reply Image_]":""} 
+*│▸* ${prefix}musik
+*│▸* ${prefix}reportbug     ${explain ? "teks":""} 
+*│▸* ${prefix}translate     ${explain ? "teks/reply teks":""} 
+*│▸* ${prefix}otakuongoing  
+*│▸* ${prefix}samehadaku
 *│*
 *╰────────────⦁*
 
 *╭─❲ OWNER ❳*
 *│*
+*│▸* ${prefix}off     ${explain ? "alasan":""} 
 *│▸* ${prefix}on
-*│▸* ${prefix}off     ${explain ? "[ _Alasan_ ]":""} 
-*│▸* ${prefix}bc     ${explain ? "[ _Teks_ ]":""} 
-*│▸* ${prefix}bcgc     ${explain ? "[ _Teks_ ]":""} 
-*│▸* ${prefix}bcpc     ${explain ? "[ _Teks_ ]":""} 
-*│▸* ${prefix}pcallmem     ${explain ? "[ _Teks_ ]":""} 
-*│▸* ${prefix}block    ${explain ? "[ _Tag/Reply/Nomer_ ]":""} 
-*│▸* ${prefix}unblock     ${explain ? "[ _Tag/Reply/Nomer_ ]":""} 
-*│▸* ${prefix}addstory     ${explain ? "[ _Reply Image/Vidio/Teks":""} 
+*│▸* ${prefix}bc     ${explain ? "teks":""} 
+*│▸* ${prefix}bcgc     ${explain ? "teks":""} 
+*│▸* ${prefix}bcpc     ${explain ? "teks":""} 
+*│▸* ${prefix}pcallmem     ${explain ? "teks":""} 
+*│▸* ${prefix}block    ${explain ? "tag/reply/nomer":""} 
+*│▸* ${prefix}unblock     ${explain ? "tag/reply/nomer":""} 
+*│▸* ${prefix}addstory     ${explain ? "reply image/vidio/teks":""} 
 *│▸* ${prefix}status
 *│▸* ${prefix}explain <on/off>
 *│▸* ${prefix}self
 *│▸* ${prefix}public
-*│▸* ${prefix}sendhidetag      ${explain ? "[ _Idgc|Teks_ ]":""} 
-*│▸* ${prefix}adderror     ${explain ? "[ _Teks|Teks_ ]":""} 
-*│▸* ${prefix}addorder      ${explain ? "[ _Link Gc_ ]":""} 
-*│▸* ${prefix}addprem      ${explain ? "[ _reply/tag/nomer_ ]":""} 
-*│▸* ${prefix}addrespon     ${explain ? "[ _Teks Teks_ ]":""} 
-*│▸* ${prefix}delrespon     ${explain ? "[ _Teks_ ]":""} 
+*│▸* ${prefix}setthumb    ${explain ? "reply image":""} 
+*│▸* ${prefix}setppbot     ${explain ? "reply image":""} 
+*│▸* ${prefix}setfakeimg    ${explain ? "reply image":""} 
+*│▸* ${prefix}setreply
+*│▸* ${prefix}setbc     ${explain ? "troli/lokasi/dokumen":""} 
+*│▸* ${prefix}setovo      ${explain ? "reply image":""} 
+*│▸* ${prefix}setgopay      ${explain ? "reply image":""} 
+*│▸* ${prefix}setdana       ${explain ? "reply image":""} 
+*│▸* ${prefix}setimageinfo     ${explain ? "reply image":""} 
+*│▸* ${prefix}setmenu      ${explain ? "pdf/troli/katalog/lokasi":""} 
+*│▸* ${prefix}sendhidetag      ${explain ? "idgc|teks":""} 
+*│▸* ${prefix}adderror     ${explain ? "teks|teks":""} 
+*│▸* ${prefix}addorder      ${explain ? "link gc":""} 
+*│▸* ${prefix}addprem      ${explain ? "reply/tag/nomer":""} 
+*│▸* ${prefix}addrespon     ${explain ? "teks teks":""} 
+*│▸* ${prefix}delrespon     ${explain ? "teks":""} 
 *│▸* ${prefix}listrespon
 *│▸* ${prefix}listuser
-*│▸* ${prefix}delprem      ${explain ? "[ _Reply/Tag/Nomer_ ]":""} 
+*│▸* ${prefix}delprem      ${explain ? "reply/tag/nomer":""} 
 *│▸* ${prefix}giftlimit
 *│▸* ${prefix}resetlimit
-*│▸* ${prefix}setcmd      ${explain ? "[ _ Reply/Sticker + Commandnya_ ]":""} 
-*│▸* ${prefix}delcmd      ${explain ? "[ _Reply/Sticker_ ]":""} 
-*│▸* ${prefix}blockcmd      ${explain ? "[ _Command_ ]":""} 
-*│▸* ${prefix}delblockcmd    ${explain ? "[ _Command_ ]":""} 
+*│▸* ${prefix}setcmd      ${explain ? "reply/sticker + commandnya":""} 
+*│▸* ${prefix}delcmd      ${explain ? "reply/sticker":""} 
+*│▸* ${prefix}blockcmd      ${explain ? "command":""} 
+*│▸* ${prefix}delblockcmd    ${explain ? "command":""} 
 *│▸* ${prefix}delchat
 *│▸* ${prefix}readall
 *│▸* ${prefix}clearall
@@ -475,24 +433,32 @@ ${week}, ${calender}
 *│▸* ${prefix}listcmd
 *│▸* ${prefix}listorder
 *│▸* ${prefix}out
-*│▸* ${prefix}autowelcome    ${explain ? "[ _On/Off_ ]":""} 
-*│▸* ${prefix}autotyping     ${explain ? "[ _On/Off_ ]":""} 
-*│▸* ${prefix}autoread     ${explain ? "[ _On/Off_ ]":""} 
-*│▸* ${prefix}autovn     ${explain ? "[ _On/Off_ ]":""} 
-*│▸* ${prefix}autoclearall    ${explain ? "[ _On/Off_ ]":""} 
-*│▸* ${prefix}autoblockcmd     ${explain ? "[ _On/Off_ ]":""} 
-*│▸* ${prefix}antichatbot     ${explain ? "[ _On/Off_ ]":""} 
-*│▸* ${prefix}anticall     ${explain ? "[ _On/Off_ ]":""}  
+*│▸* ${prefix}autowelcome    ${explain ? "on/off":""} 
+*│▸* ${prefix}autotyping     ${explain ? "on/off":""} 
+*│▸* ${prefix}autoread     ${explain ? "on/off":""} 
+*│▸* ${prefix}autoreadgc     ${explain ? "on/off":""} 
+*│▸* ${prefix}autoreadpc     ${explain ? "on/off":""} 
+*│▸* ${prefix}autovn     ${explain ? "on/off":""} 
+*│▸* ${prefix}autoblockcmd     ${explain ? "on/off":""} 
+*│▸* ${prefix}antichatbot     ${explain ? "on/off":""} 
+*│▸* ${prefix}anticall     ${explain ? "on/off":""} 
+*│▸* ${prefix}stopjadibot 
 *│▸* ${prefix}listbot
-*│▸* ${prefix}setwelcome
-*│▸* ${prefix}forward     ${explain ? "[ _On/Off_ ]":""} 
-*│▸* ${prefix}forwardtotal     ${explain ? "[ _angka_ ]":""} 
-*│▸* ${prefix}join    ${explain ? "[ _Linkgc_ ]":""} 
+*│▸* ${prefix}forward     ${explain ? "on/off":""} 
+*│▸* ${prefix}forwardtotal     ${explain ? "angka":""} 
+*│▸* ${prefix}join    ${explain ? "linkgc":""} 
 *│*
 *╰────────────⦁*
 
 *╭─❲ MODE WAR ❳*
 *│*
+*│▸* ${prefix}bugv1 
+*│▸* ${prefix}bugv2 
+*│▸* ${prefix}bugv3 
+*│▸* ${prefix}bugv4 
+*│▸* ${prefix}bugv5     
+*│▸* ${prefix}bugvn    
+*│▸* ${prefix}amaterasu 
 *│*
 *╰────────────⦁*
 
@@ -502,14 +468,12 @@ ${week}, ${calender}
 *│* • Nina Kawai
 *│* • Resta Gamteng :v
 *│* • Zeeone Ofc
-*│* • Zenix
 *│* • Yudha Perdana
 *│* • Yogi PW
 *│* • Decode Denpa
 *│* • Fernazer
 *│* • X - Dev Team
 *│* • XChillDs & Yuzu
-*│* • Dika Ardnt
-*│*
+*│* • VANZZ OFC
 *╰────────────⦁*`
 }

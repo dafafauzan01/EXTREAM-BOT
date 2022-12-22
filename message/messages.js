@@ -28,7 +28,12 @@ exports.teksspam =["Jangan spam om",
 "Jangan spam",
 "Jangan spam ya",
 "Woy jangan spam",
-"Ups kamu terdeteksi spam, tolong beri jeda 5 detik"]
+"Satu satu dong kak jangan kroyokan ☹️",
+"Bentar dulu kak gantian ☹️",
+"Tunggu yang laen selesai dulu kak 🙄",
+"Satu satu kak jangan kroyokan aku bukan babu disini 😥","Bentar bentar 🤧",
+"Nyenyenye  😜🤣",
+"Sabar dulu ya kak, yang sabar di sayang janda 🤤"]
 
 
 
@@ -202,20 +207,6 @@ exports.ohayo =["pagi",
 "Ohayo"
 ]
 
-exports.anime =[
-"uzumaki naruto","uchiha sasuke","haruno sakura","hyuga neji","kiba","hinata","tenten","uchiha shisui","uchiha itachi","kisame","uchiha obito","hatake kakashi","uzumaki karin","zetsu","uchiha madara","tobirama","jiraiya","tsunade","killer bee","nara shikamaru","ino","choji","nagato","konan","itachi","gara","kankuro","temari",
-"tanjiro","giyu","akaza","kyojuro","nezuko","inosuke","zenitsu","sabito","gyomei","shinobu","kanao","mitsuri","aoi kanzaki","tengen","muichiro","genya","muzan","sanemi",
-"esdeath","tatsumi","akame","kurome","najenda","leone","sheele",
-"ichigo","kanpachi","aizen","kuruyashiki","urahara kisuke","yoruichi",
-"kirito","asuna","sinon",
-"luffy","zoro","nami","robin","sanji","usop","chopper",
-"goku","vegeta","gohan","beerus","bulma","goten","krillin","piccolo",
-"saitama","genos",
-"rimuru","milim nava","benimaru","souei","shion",
-"kazuma sato","megumin",
-"chizuru ichinose","kazuya kinoshita","mami nanami","ruka sarashina","sumi sakurasawa",
-"elaina"
-   ]
 
 exports.salam =["P","p","Woy","woy","Oy","oy","hey","Hey"]
 
