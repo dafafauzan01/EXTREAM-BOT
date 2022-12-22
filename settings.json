@@ -1,81 +1,51 @@
-{    
-     "Version": "3.5.0",
-     "namalu" : "Dafa ×፝֟͜×",
+{
+     "prefix": "!",
+     "namalu" : "Dafa",
      "nomerlu": "6283843400022",
-     "namabot": "𝐖𝐢𝐛𝐮-𝐁𝐨𝐭𝐳 ×፝֟͜×",
-     "nomerbot": "6285694985003",
-     "gender" : "Female",
-     "copyright" : "𝐃𝐚𝐟𝐟𝐚",
-     "namaDocument": "𝐖𝐢𝐛𝐮-𝐁𝐨𝐭𝐳ོ ×፝֟͜×",
-     "joinGcExtream": true,
-
+     "namabot": "Daffa-Botz",
+     "nomerbot": "6282341921345",
+     "gender" : "FEMALE",
+     "copyright" : "Daffa-Botz",
+     "Shopee" : "-",
+     "Gopay" : "-",
+     "Dana" : "6283843400022",
+     "Ovo" : "6283843400022",
+     "namaDocument": "Daffa-Botz",
+     "joinGcExtream": false,
+     "Anticall": true,
+     "multi": true,
+     "onepref" : false,
      "publik": true,
      "forwarding": false,
-     "Loading": false,
      "antitroli" : false,
-     
      "autovn" : false,
      "autosticker" : false,
      "autorespon" : false,
      "autotyping" : false,
      "autoread" : true,
-     "autoblockcmd" : false, 
-     "autobio" : true,
-     "autoLevel" : true,
-     "AutoClearChat": true,
+     "katalogMenu": false,
+     "troliMenu": false,
+     "lokasiMenu": true,
+     "documentMenu": false,
+     "autoblockcmd" : true,
+     "autoWelcome": false,
+     "welcomeType1": false,
+     "welcomeType2": false,
+     "welcomeType3": true,
+     "chatBot" : false,
+     "teksChat" : "Gada menu",
      "totalForward" : 1000000,
      "explain": false,
-     "jumlahTroli": 2022,
-     
-     "Jika ada yang telpon, bot bakal kirim bug  ke penelpon jika aktikan fitur sendbug": "ke true",
-       "Anticall": true,
-      "sendbug": true,
-     
-     "SetFunction": {
-     "Daftar_Font": "block, slick, tiny, grid, pallet, shade, chrome, simple, simpleBlock, 3d, simple3d, huge, console",        
-     "font": "simple",                      
-     "self": "SELF",
-     "bot": "BOT",
-     "ext": "REVOLUTION"
-     },
-     
-     "antiPrivateChat": {
-     "chatBot" : false,
-     "teksChat" : "Gada menu"
-     },
-     
-     "setPayment": {
-     "Shopee" : "082136588829",
-     "Gopay" : "082136588829",
-     "Dana" : "083843400022",
-     "Ovo" : "083843400022"
-     },
-     
-     "setPrefix": {
-     "prefix": "!",
-     "multi": true,
-     "onepref" : false,
-     "nopref" : false
-     },
-                                                                                                                                                                                                                                   
-     "setWelcome": {
-     "autoWelcome": false,
-     "welcomeType": "type3",
-     "background": "https://tinyurl.com/yxvl8h3a"
-     },    
-     
-     "setMenu": "document",    
-      "setBc":  "lokasi",  
-     "setReply": "web",  
-     "setQuoted": "ftoko",
-     
      "gamewaktu": 60,
 	 "limitCount": 30,
 	 "gcount": {
-	 "prem": 60,
-	 "user": 20
-}
+		"prem": 30,
+		"user": 20
+},
     
+     "zeks": "officialdittaz", 
+     "zenzkey": "officialdittaz",
+     "xteam": "170342e43e147afa"
 }
 
    
